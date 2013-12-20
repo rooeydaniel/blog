@@ -3,8 +3,11 @@ var express = require('express');  // Pulls in the express framework
 /*
     Mongoose is a standard library used with Node to interact with MongoDB
  */
+
 var mongoose = require('mongoose'); // Pulls in the mongoose library
-mongoose.connect('mongodb://<dbuser>:<password>@ds061208.mongolab.com:61208/heroku_app20540978'); // Connects to our local MongoDB instance
+var user = process.env.DB_USER;
+var pass = process.env.DB_PASSWORD;
+mongoose.connect('mongodb://' + user + ':' + pass + '@ds061208.mongolab.com:61208/heroku_app20540978');
 
 /*
     App Configuration Section
