@@ -1,0 +1,26 @@
+!!!
+html(ng-app="blogApp")
+    head
+        meta(charset='utf8')
+        base(href='/')
+        title Blog Seed App
+        link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/css/app.css')
+    body
+        .navbar.navbar-inverse.navbar-fixed-top
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/') Blog Project Seed
+                .collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li.active
+                            a(href='/') Home
+                        li
+                            a(href='/addPost') Add Post
+        block body
+
+//- More Jade-converted bootstrap templates can be found here - https://github.com/ALT-F1/bootstrap3-jade-node-express-grunt/tree/master/app/views/bootstrap3-templates
+//- You can also clone their project and run it locally - https://github.com/ALT-F1/bootstrap3-jade-node-express-grunt
