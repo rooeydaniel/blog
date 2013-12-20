@@ -5,9 +5,7 @@ var express = require('express');  // Pulls in the express framework
  */
 
 var mongoose = require('mongoose'); // Pulls in the mongoose library
-var user = process.env.DB_USER;
-var pass = process.env.DB_PASSWORD;
-mongoose.connect('mongodb://' + user + ':' + pass + '@ds061208.mongolab.com:61208/heroku_app20540978');
+mongoose.connect(process.env.MONGOLAB_URI);
 
 /*
     App Configuration Section
